@@ -25,4 +25,5 @@ jobs:
         with:
           name: pluto-files
           path: planet.db
+          if-no-files-found: error
 
