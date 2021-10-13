@@ -19,7 +19,7 @@ jobs:
         with:
           name: pluto-files
       - name: "Update feeds"
-        uses: OSAS/github-pluto-feeds
+        uses: OSAS/github-pluto-feeds@master
       - name: "Save updated artifacts"
         uses: actions/upload-artifact@v2
         with:
