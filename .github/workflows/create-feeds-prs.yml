@@ -1,0 +1,28 @@
+---
+name: "Generate PRs for feeds"
+
+on: workflow_dispatch
+# when ready for production
+#on:
+#  schedule:
+#    - cron: '3 * * * *'
+
+jobs:
+  update-feeds:
+    name: "Update feeds"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout project"
+        uses: actions/checkout@v2
+      - name: "Fetch previous artifacts"
+        uses: actions/download-artifact@v2
+        with:
+          name: pluto-files
+      - name: "Update feeds"
+        uses: OSAS/github-pluto-feeds
+      - name: "Save updated artifacts"
+        uses: actions/upload-artifact@v2
+        with:
+          name: pluto-files
+          path: planet.db
+
