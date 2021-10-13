@@ -15,9 +15,15 @@ jobs:
       - name: "Checkout project"
         uses: actions/checkout@v2
       - name: "Fetch previous artifacts"
-        uses: actions/download-artifact@v2
+        uses: dawidd6/action-download-artifact@v2
         with:
+          # there is no variable for this
+          # https://github.community/t/access-workflow-filename-even-when-name-is-defined/17641
+          workflow: create-feeds-prs.yml
+          workflow_conclusion: success
           name: pluto-files
+          path: .
+          check_artifacts:  false
       - name: "Update feeds"
         uses: OSAS/github-pluto-feeds@master
       - name: "Save updated artifacts"
