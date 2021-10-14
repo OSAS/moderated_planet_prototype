@@ -23,7 +23,8 @@ jobs:
           workflow_conclusion: success
           name: pluto-files
           path: .
-          check_artifacts:  false
+          check_artifacts:  False
+        continue-on-error: True
       - name: "Update feeds"
         uses: OSAS/github-pluto-feeds@master
       - name: "Save updated artifacts"
