@@ -38,6 +38,7 @@ jobs:
   feeds-create-posts-prs:
     name: "Create PRs for moderating posts"
     runs-on: ubuntu-latest
+    needs: update-feeds
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v2
