@@ -23,6 +23,7 @@ jobs:
           workflow_conclusion: success
           name: pluto-files
           path: .
+          # won't exist during first run
           check_artifacts:  False
         continue-on-error: True
       - name: "Update feeds"
@@ -33,4 +34,29 @@ jobs:
           name: pluto-files
           path: planet.db
           if-no-files-found: error
+
+  feeds-create-posts-prs:
+    name: "Create PRs for moderating posts"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout project"
+        uses: actions/checkout@v2
+      - name: "Fetch previous artifacts"
+        # actions/download-artifact is not able to fetch artifacts across runs
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          # there is no variable for this
+          # https://github.community/t/access-workflow-filename-even-when-name-is-defined/17641
+          workflow: create-feeds-prs.yml
+          workflow_conclusion: success
+          name: pluto-files
+          path: .
+          # absolutely needed
+          check_artifacts:  True
+      - name: "Generate PRs for posts"
+        uses: OSAS/github-pluto-moderate-posts@master
+        with:
+          post-path: 'src/en/news/blog/%Y/{title}/index.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
