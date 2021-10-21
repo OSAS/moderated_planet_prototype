@@ -1,0 +1,118 @@
+---
+title:         "Introducing the new Fedora Accounts"
+date:          2021-03-10 08:00:00 UTC
+modified_date: 2021-04-05 16:34:41 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/introducing-the-new-fedora-accounts/"
+---
+<img width="150" height="150" src="//communityblog.fedoraproject.org/wp-content/uploads/2019/03/fedora_infra-150x150.jpg" class="webfeedsFeaturedVisual wp-post-image" alt="" loading="lazy" style="display: block; margin-bottom: 5px; clear:both;max-width: 100%;" link_thumbnail="">
+<p>Every Fedora contributor is familiar with FAS (the Fedora Account System), and has used it to create and manage their Fedora Contributor Account. The current “FAS2” system was first deployed in 2008, and has managed Fedora users and groups for over 13 years.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="834" height="396" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/03/image.png" alt="" class="wp-image-9660" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/image.png 834w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/image-300x142.png 300w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/image-768x365.png 768w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/image-766x364.png 766w" sizes="(max-width: 834px) 100vw, 834px"><figcaption>FAS2 in action</figcaption></figure>
+
+
+
+<p>The FAS2 software, however, is showing it’s age. It has proved increasingly hard for the Fedora Infrastructure team to support and maintain.</p>
+
+
+
+<span id="more-9659"></span>
+
+
+
+<h2>Enter Fedora Accounts</h2>
+
+
+
+<p>Fedora Accounts is the new place for creating and maintaining your Fedora contributor account. When it goes live in the end of March 2021, it will be available at <a href="https://accounts.fedoraproject.org/">accounts.fedoraproject.org</a>.</p>
+
+
+
+<p>You can test out the new system today on the staging instance, which is available at <a href="https://admin.stg.fedoraproject.org/accounts">admin.stg.fedoraproject.org/accounts</a>.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="612" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-1024x612.png" alt="" class="wp-image-9662" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-1024x612.png 1024w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-300x179.png 300w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-768x459.png 768w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-1536x918.png 1536w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00-766x458.png 766w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/03/screencapture-noggin-noggin-test-5000-user-benjaminrogers-2021-03-02-19_04_00.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<h3>A whole new system</h3>
+
+
+
+<p>It is important to note that the new Fedora Accounts is not just a new user interface on the old FAS2 system. Fedora Accounts uses <a href="https://www.freeipa.org/page/Main_Page">FreeIPA</a> on the backend, with the new custom <a href="https://github.com/fedora-infra/freeipa-fas/">freeipa-fas plugin</a> applied to add extra functionality for Fedora Accounts.</p>
+
+
+
+<p>The new web frontend is powered by a new piece of software named <a href="https://github.com/fedora-infra/noggin">Noggin</a>, which provides a tailored UI for creating and managing your Fedora contributor account, and interfaces directly with the FreeIPA backend.</p>
+
+
+
+<h2>Changes from FAS2 </h2>
+
+
+
+<p>As Fedora Accounts is an entirely new system, there are some changes in how users interact with the system. </p>
+
+
+
+<h3>Group Sponsors </h3>
+
+
+
+<p>FAS2 had group administrators that gave permissions to those users to add new administrators, add new group members, and edit the finer details of the group. </p>
+
+
+
+<p>The new FreeIPA-based Fedora Accounts replaces group administrators with Sponsors who have permissions to just add new group members.</p>
+
+
+
+<h3>Changing Group Details </h3>
+
+
+
+<p>Changes to group details (like group description or contact information), or changes to the sponsors of a group are no longer self-service, and require <a href="https://pagure.io/fedora-infrastructure/new_issue">filing a fedora-infra request</a>. </p>
+
+
+
+<p><strong>Note for current Group Administrators in FAS2: </strong> Review your group’s details in FAS2 now and ensuring they are correct before the import into the new system. This will streamline the process and save you from filing a ticket later on.</p>
+
+
+
+<h3>Joining Groups </h3>
+
+
+
+<p>Previously, FAS2 had the ability for users to apply for groups, and a group administrator needed to approve these requests. However, many groups have specific joining procedures involving interacting with the group via other channels (like email or IRC). In the new Fedora Accounts, a group sponsor adds new members to the group; there is no additional process required in the accounts system.</p>
+
+
+
+<p><strong>Note for current Group Administrators in FAS2:</strong> Review your group’s join process to omit the group application step. Instead, inform new contributors whom or where to contact to gain group membership.</p>
+
+
+
+<h3>Two-factor authentication with TOTP </h3>
+
+
+
+<p>The new system also provides the ability for all users to enable two-factor authentication on their Fedora contributor account using <a href="https://en.wikipedia.org/wiki/Time-based_One-Time_Password">TOTP</a>. This allows you to use an authentication application such as FreeOTP to generate a one-time password when logging in. The <a href="https://docs.fedoraproject.org/en-US/fedora-accounts/user/#twofactor">Fedora Accounts documentation</a> contains more information on enabling this new feature. </p>
+
+
+
+<p><strong>Note:</strong> If you are a member of a Sysadmin group, you must enable two-factor authentication to retain membership.</p>
+
+
+
+<h2>Try out Fedora Accounts </h2>
+
+
+
+<p>The new Fedora Accounts is slated for production release by the end of March 2021. You can try it out now in staging at <a href="https://admin.stg.fedoraproject.org/accounts" target="_blank" rel="noreferrer noopener">admin.stg.fedoraproject.org/accounts</a>. Note that while your account from FAS will be imported into the staging instance, your password will not be. Use the Reset Password feature in the UI to reset your password on staging for testing it out. </p>
+
+
+
+<p>Also for further reading, see the documentation already available on the <a href="https://docs.fedoraproject.org/en-US/fedora-accounts/">Fedora Documentation site.</a></p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/introducing-the-new-fedora-accounts/">Introducing the new Fedora Accounts</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
