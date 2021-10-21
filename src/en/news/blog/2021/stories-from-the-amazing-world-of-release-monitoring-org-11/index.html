@@ -1,0 +1,122 @@
+---
+title:         "Stories from the amazing world of release-monitoring.org #11"
+date:          2021-06-17 08:00:00 UTC
+modified_date: 2021-06-21 14:33:37 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/stories-from-the-amazing-world-of-release-monitoring-org-11/"
+---
+<img width="150" height="150" src="//communityblog.fedoraproject.org/wp-content/uploads/2019/03/release-monitoring_header-150x150.png" class="webfeedsFeaturedVisual wp-post-image" alt="" loading="lazy" style="display: block; margin-bottom: 5px; clear:both;max-width: 100%;" link_thumbnail="">
+<p>The sun is shining on the land as I walk through the streets of one of the cities on Anitya. My staff is doing clinking sounds on the stone road under my feet. Everything looks peacefully and seems to be in order. This is how I like it.</p>
+
+
+
+<p>Not many citizens have noticed my humble presence. The life here is too busy and I’m a frequent guest in these parts. My steps are going towards the local tavern. I know who will wait for me there and this makes my heart happy. Traveler is always coming back to visit me and his visits are always good way to spent my time.</p>
+
+
+
+<p>The tavern is a little dark like most of the taverns in these parts of the land. I looked around searching the faces sitting here, looking for the one that seems familiar to me. I found it! Traveler was sitting in corner sipping his pint of beer and looking at the fire crackling in the heart of the tavern. I came closer to his table: “Hello traveler, it’s nice to meet you again. It was few months till we saw each other last time. The times were busy, but I have plenty of good news for you. I know you want to know what is happening around. So let’s begin.” I sat on the stool beside his table and started talking.</p>
+
+
+
+<span id="more-10007"></span>
+
+
+
+<h2>Anitya</h2>
+
+
+
+<h3>Release 1.0.0</h3>
+
+
+
+<p>It took a lot of hard work, but <a href="https://github.com/fedora-infra/anitya/releases/tag/1.0.0">Anitya 1.0.0</a> was finally released on 20 January 2021 and the realm of <a href="https://release-monitoring.org">release-monitoring.org</a> rejoiced. This release added plenty of new features, fixed plenty of bugs, and included a complete rewrite of documentation. On some of the features we will look more closely now. For the full set of changes look at the <a href="https://github.com/fedora-infra/anitya/releases/tag/1.0.0">release on Github</a>.</p>
+
+
+
+<h4>Archiving projects</h4>
+
+
+
+<p>As admin in Anitya, you now have an ability to archive a project. This could be used for projects that are no longer maintained upstream, but we still want to have them in Anitya. Archived project will not be checked for new versions and the list of those project can be find under projects menu in header bar of the Anitya.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="763" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button-1024x763.png" alt="" class="wp-image-10009" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button-1024x763.png 1024w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button-300x223.png 300w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button-768x572.png 768w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button-766x571.png 766w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_button.png 1243w" sizes="(max-width: 1024px) 100vw, 1024px"><figcaption>Archive button on project</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="475" height="205" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_projects.png" alt="" class="wp-image-10010" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_projects.png 475w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_archive_projects-300x129.png 300w" sizes="(max-width: 475px) 100vw, 475px"><figcaption>Archived section in project menu</figcaption></figure>
+
+
+
+<h4>Preview mode</h4>
+
+
+
+<p>Anitya now allows users to test their changes before submitting them when editing project. This is done by using <em>Test check</em> button in bottom of the edit screen. However, this doesn’t affect any previously retrieved version.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="650" height="585" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_preview_mode.png" alt="" class="wp-image-10011" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_preview_mode.png 650w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_preview_mode-300x270.png 300w" sizes="(max-width: 650px) 100vw, 650px"><figcaption>Edit project page with highlighted Test check button</figcaption></figure>
+
+
+
+<h4>Pre-release filter</h4>
+
+
+
+<p>The Anitya can now recognize the pre-releases on the project versions. This is either automatic based on the chosen version scheme or manual by adding pre-release filter.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="650" height="585" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_field.png" alt="" class="wp-image-10012" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_field.png 650w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_field-300x270.png 300w" sizes="(max-width: 650px) 100vw, 650px"><figcaption>Edit project page with highlighted Pre-release filter</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="763" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column-1024x763.png" alt="" class="wp-image-10013" srcset="https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column-1024x763.png 1024w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column-300x223.png 300w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column-768x572.png 768w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column-766x571.png 766w, https://communityblog.fedoraproject.org/wp-content/uploads/2021/06/Anitya_pre_release_column.png 1243w" sizes="(max-width: 1024px) 100vw, 1024px"><figcaption>Project page with highlighted Pre-release column</figcaption></figure>
+
+
+
+<h4>Documentation rewrite</h4>
+
+
+
+<p>The documentation was rewritten with up to date info. It now also contains an comprehensive guide for both users and admins of Anitya. You can check it on <a href="https://anitya.readthedocs.io/en/stable/">readthedocs.io</a>.</p>
+
+
+
+<h3>Flathub flatpak-external-data-checker</h3>
+
+
+
+<p>Flathub notifier for new versions of flatpak dependencies <a href="https://github.com/flathub/flatpak-external-data-checker">flatpak-external-data-checker</a> is now supporting Anitya as source of the updates. I collaborated with the maintainers of flatpak-external-data-checker to implement changes that helped with the integration of Anitya. What a glorious day for flatpak world.</p>
+
+
+
+<h3>Other notable changes</h3>
+
+
+
+<p>There were a few more releases after the 1.0.0 release. You can look at the changes in <a href="https://github.com/fedora-infra/anitya/releases">releases</a> on GitHub. These were a small releases addressing either bugs or adding few features (like adding link to Fedora package and PLD Linux package to mapping (thanks to <a href="https://github.com/glensc">glensc</a> and <a href="https://github.com/abitrolly">abitrolly</a> for their contribution)).</p>
+
+
+
+<h2>the-new-hotness</h2>
+
+
+
+<h3>Release 1.0.0</h3>
+
+
+
+<p>The <a href="https://github.com/fedora-infra/the-new-hotness/milestone/2">release 1.0.0</a> for the-new-hotness is still in progress, but the work is going forward. I spent almost three months trying to rewrite the-new-hotness to <a href="https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/">clean architecture</a> design. But it was worth it: the-new-hotness is now much easier to maintain, less error-prone, and has better test coverage than the previous design. These changes are now deployed in staging and being tested.</p>
+
+
+
+<h2>Post scriptum</h2>
+
+
+
+<p>This is all for now from the world of release-monitoring.org. Do you like this world and want to join our conclave of mages? Seek me (mkonecny/zlopez) in the magical yellow pages (IRC libera.chat #fedora-apps) and ask how can you help. Or visit the Bugcronomicon (GitHub issues on <a href="https://github.com/fedora-infra/anitya/issues">Anitya</a> or <a href="https://github.com/fedora-infra/the-new-hotness/issues">the-new-hotness</a>) directly and pick something to work on.</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/stories-from-the-amazing-world-of-release-monitoring-org-11/">Stories from the amazing world of release-monitoring.org #11</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
