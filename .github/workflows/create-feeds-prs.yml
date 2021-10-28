@@ -1,11 +1,10 @@
 ---
 name: "Generate PRs for feeds"
 
-on: workflow_dispatch
-# when ready for production
-#on:
-#  schedule:
-#    - cron: '3 * * * *'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 * * * *'
 
 jobs:
   update-feeds:
