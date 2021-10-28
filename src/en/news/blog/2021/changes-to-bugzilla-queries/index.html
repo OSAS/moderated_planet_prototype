@@ -1,0 +1,53 @@
+---
+title:         "Changes to Bugzilla queries"
+date:          2021-09-17 12:04:56 UTC
+modified_date: 2021-09-17 12:05:00 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/changes-to-bugzilla-queries/"
+---
+<p>On 13 September 2021, Red Hat’s Bugzilla team released updates to Bugzilla that included new functionality for pagination. There is also a change to the default number of results with the bug search API to support this feature. The default is now 20 but can be adjusted to 1000 by using the limit/offset parameters. </p>
+
+
+
+<span id="more-10298"></span>
+
+
+
+<h2>Pagination for Bugzilla Data Tables</h2>
+
+
+
+<p>Bugzilla now supports Pagination for data tables, improving performance by not loading all results at one time. As users navigate through pages, results will be lazy-loaded. Users can perform bulk actions on the list by selecting the rows from the list. </p>
+
+
+
+<h2>Changes to Bugzilla list API response</h2>
+
+
+
+<h3>Authenticated users</h3>
+
+
+
+<p>The default Bug search API(REST/XMLRPC/JSONRPC) result in 20 bugs by default and users can change this by specifying the <a href="https://bugzilla.redhat.com/docs/en/html/integrating/api/Bugzilla/WebService/Bug.html?highlight=limit#search" target="_blank" rel="noreferrer noopener">limit</a>. The value of limit can be up to 1000 bugs. If you need results that are more than 1000, you can use the <a href="https://bugzilla.redhat.com/docs/en/html/integrating/api/Bugzilla/WebService/Bug.html?highlight=offset#search" target="_blank" rel="noreferrer noopener">offset</a> parameter. You can get default 1000 bugs by sending 0 as a limit parameter.</p>
+
+
+
+<p>Additionally, they have introduced “total_matches”, “limit”, and “offset” values in the response. These give the total number of bugs qualified for the query and the number of results in the response.</p>
+
+
+
+<p>You can also set your account’s default limit in <a href="https://bugzilla.redhat.com/userprefs.cgi">user preferences</a>. The account default can be set as high as 200. You can still use the limit parameter to get up to 1000 bugs.</p>
+
+
+
+<h3>Non-Authenticated users</h3>
+
+
+
+<p>Since many unauthenticated calls come to Bugzilla, which just scans for results, they have decided to limit the number of results to be 20 bugs; Buglist API will not respect limits in this case. If you <a href="https://bugzilla.redhat.com/docs/en/html/api/core/v1/general.html#authentication">authenticate</a> your query, you can set the limit as described above.</p>
+
+
+
+<p>Note: Depending on the number of fields and data requested, your query can timeout.</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/changes-to-bugzilla-queries/">Changes to Bugzilla queries</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
