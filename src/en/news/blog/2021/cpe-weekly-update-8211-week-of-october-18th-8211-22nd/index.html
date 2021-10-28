@@ -1,0 +1,146 @@
+---
+title:         "CPE Weekly Update &#8211; Week of October 18th &#8211; 22nd"
+date:          2021-10-21 11:02:03 UTC
+modified_date: 2021-10-21 11:59:18 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-october-18th-22nd/"
+---
+<p>This is a weekly report from the CPE (Community Platform Engineering) Team. If you have any questions or feedback, please respond to this report or contact us on #redhat-cpe channel on libera.chat (https://libera.chat/).</p>
+
+
+
+<span id="more-10381"></span>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Purpose of this team is to take care of day to day business regarding CentOS and Fedora Infrastructure and Fedora release engineering work. It’s responsible for services running in Fedora and CentOS infrastructure and preparing things for the new Fedora release (mirrors, mass branching, new namespaces etc.). The ARC (which is a subset of the team) investigates possible initiatives that CPE might take on.</p>
+
+
+
+<h3>Update</h3>
+
+
+
+<h4>Fedora Infra</h4>
+
+
+
+<ul>
+<li>Fixed fasjson in stg (was stuck on a image pull)</li>
+<li>Added 200GB to ostree netapp volume</li>
+<li>Retired iddev and simple-koji-ci cloud instances</li>
+<li>Declared the sssd bug fixed (hadn’t happened in 2 weeks)</li>
+</ul>
+
+
+
+<h4>CentOS Infra including CentOS CI</h4>
+
+
+
+<ul>
+<li>Stream 9 available in CI (x86_64 only though)<ul>
+<li>Newer python-cicolient</li>
+<li>Duffy2 hotfix for paramiko issue with el9</li>
+</ul>
+</li>
+<li>Exploring options for secureboot for SIGs</li>
+<li>Deploying Duffy Dev Lab for initiative</li>
+<li>Business as usual (new tags created for SIGs, ….)</li>
+</ul>
+
+
+
+<h4>Release Engineering</h4>
+
+
+
+<ul>
+<li>Updated critpath packages for all releases</li>
+<li>F35 final RC request landed<ul><li>Compose is finished with incomplete state armhfp container aarch64 KDE and failed</li></ul>
+</li>
+</ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this new distribution a reality. The goal of this initiative is to prepare the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Work continues on Content Resolver buildroot support</li>
+<li>We’re now running repoclosure before we sync to the mirrors</li>
+</ul>
+
+
+
+<h2>Datanommer/Datagrepper V.2</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>The datanommer and datagrepper stacks are currently relying on fedmsg which we want to deprecate.<br>These two applications need to be ported off fedmsg to fedora-messaging. As these applications are ‘old-timers’ in the fedora infrastructure, we would also like to look at optimizing the database or potentially redesigning it to better suit the current infrastructure needs.<br>For a phase two, we would like to focus on a DB overhaul.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul><li>Import crashed because of a database schema design decision that didn’t account for the size of our messages, it’s fixed and the import started again because the schema update on existing data would take a lot of time too. ETA is back to 70 days.</li></ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Duffy is a system within CentOS CI Infra which allows tenants to provision and access bare metal resources of multiple architectures for the purposes of CI testing.<br>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have OpenNebula hypervisor available, and have started developing playbooks which can be used to create VMs using the OpenNebula API, but due to the current state of how Duffy is deployed, we are blocked with new dev work to add the VM checkout functionality.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Took stock and decided to rewrite</li>
+<li>Cleaned up branches</li>
+<li>Boilerplate work</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-october-18th-22nd/">CPE Weekly Update – Week of October 18th – 22nd</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
