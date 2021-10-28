@@ -1,0 +1,433 @@
+---
+title:         "CPE Quarterly Update Q3 2021"
+date:          2021-10-26 08:00:00 UTC
+modified_date: 2021-10-19 15:45:21 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-quarterly-update-q3-2021/"
+---
+<img width="150" height="150" src="//communityblog.fedoraproject.org/wp-content/uploads/2016/03/Web-Dev-in-Action-150x150.jpg" class="webfeedsFeaturedVisual wp-post-image" alt="IndiaHacks 2016" loading="lazy" style="display: block; margin-bottom: 5px; clear:both;max-width: 100%;" link_thumbnail="">
+<p>This is a summary of the work done on initiatives by the <a href="https://docs.fedoraproject.org/en-US/cpe/">Community Platform Engineering (CPE)</a> Team in Red Hat. Each quarter, the CPE Team—together with CentOS and Fedora community representatives—chooses initiatives to work on in the quarter. The CPE Team is then split into multiple smaller sub-teams that will work on chosen initiatives, plus the day-to-day work that needs to be done.</p>
+
+
+
+<p>Following is the list of sub-teams in this quarter:</p>
+
+
+
+<ul>
+<li>Infra &amp; Releng</li>
+<li>CentOS Stream/Emerging RHEL</li>
+<li>Datanommer/Datagrepper</li>
+<li>DNF Counting</li>
+<li>Metrics for Apps on OpenShift</li>
+</ul>
+
+
+
+<h2>Infra &amp; Releng</h2>
+
+
+
+<h3>About</h3>
+
+
+
+<p>The purpose of this team is to take care of day-to-day business regarding CentOS and Fedora Infrastructure and Fedora release engineering work. It’s responsible for services running in Fedora and CentOS infrastructure and preparing things for the new Fedora release (mirrors, mass branching, new namespaces etc.). This sub-team is also investigating possible initiatives. This is done by the Advance Reconnaissance Crew (ARC), which is formed from the Infra &amp; Releng sub-team members based on the initiative that is being investigated.</p>
+
+
+
+<p><strong>Issue trackers</strong></p>
+
+
+
+<ul>
+<li><a href="https://pagure.io/fedora-infrastructure/issues">Fedora Infrastructure</a></li>
+<li><a href="https://pagure.io/centos-infra/issues">CentOS Infrastructure</a></li>
+<li><a href="https://pagure.io/releng/issues/">Fedora Release Engineering</a></li>
+</ul>
+
+
+
+<p><strong>Documentation</strong></p>
+
+
+
+<ul>
+<li><a href="https://docs.fedoraproject.org/en-US/infra/">Fedora Infrastructure</a></li>
+<li><a href="https://docs.infra.centos.org/">CentOS Infrastructure</a></li>
+<li><a href="https://docs.pagure.org/releng/">Fedora Release Engineering</a></li>
+</ul>
+
+
+
+<h3>Members of sub-team for Q3 2021</h3>
+
+
+
+<ul>
+<li>Mark O’Brien (Team Lead) (Fedora Operations, CentOS Operations) (mobrien)</li>
+<li>Michal Konecny (Agile Practitioner) (Developer) (zlopez)</li>
+<li>Kevin Fenzi (Fedora Operations) (nirik)</li>
+<li>Fabian Arrotin (CentOS Operations) (arrfab)</li>
+</ul>
+
+
+
+<ul>
+<li>Tomas Hrcka (Fedora Release Engineering) (humaton)</li>
+<li>Lenka Segura (Developer) (lenkaseg)</li>
+</ul>
+
+
+
+<ul>
+<li>Emma Kidney (Developer) (ekidney)</li>
+<li>Ben Capper (Developer) (bcapper)</li>
+</ul>
+
+
+
+<h3>What the sub-team did in Q3 2021</h3>
+
+
+
+<h4>Fedora Infrastructure</h4>
+
+
+
+<p>In addition to the normal maintenance tasks (reboots, updates for security issues, creating groups/lists, fixing application issues) we worked on a number of items:</p>
+
+
+
+<ul>
+<li>Cleaned up nagios checks to stop alerting on swap on hardware machines</li>
+<li>Moved the vast majority of our instances to use linux-system-roles/networking to configure networking via ansible</li>
+<li>Got broken openqa-p09-worker02 back up and working with a lot of firmware upgrades and help from IBM techs.</li>
+<li>Archived off ~35TB of space from our netapp to a storinator</li>
+<li>Got zodbot (our IRC bot) moved to python3 and pointed to the new account system</li>
+<li>Upgraded the wiki to the latest stable version.</li>
+<li>Fixed an issue with OSBS building 0ad, needed a larger than default container.</li>
+<li>Setup new fedora matrix hosted server rooms/etc.</li>
+<li>Started on EPEL9 setup, mirroring centos9stream buildroot content, etc</li>
+<li>Got vmhost-x86-copr04’s motherboard replaced and back in service.</li>
+<li>Kinoite website deployed</li>
+</ul>
+
+
+
+<h4>CentOS Stream</h4>
+
+
+
+<ul>
+<li>prepared the new mirror network to accept CentOS Stream 9</li>
+<li>modified koji/cbs.centos.org to allow building for CentOS Stream 9, including new tags</li>
+<li>importing 9-stream content</li>
+<li>modified SIG process to include/support stream 9 for modified requirements (directory layout, included sources and debuginfo vs what we had before )</li>
+<li>prepare the needed infra for AWS for EC2 testing and replication across all regions for CentOS Stream 9 images</li>
+</ul>
+
+
+
+<h4>CentOS common/public infrastructure</h4>
+
+
+
+<ul>
+<li>converting all deployed CentOS Linux 8 to CentOS Stream 8</li>
+<li>relocated the armhfp community builders to other DC/hardware</li>
+<li>started investigation about migrating from Pagure 5.8 on CentOS 7 to Pagure 5.13 on CentOS Stream 8</li>
+<li>created <a href="https://docs.infra.centos.org">https://docs.infra.centos.org</a> doc website, and working in pairing mode to share infra knowledge within the team</li>
+<li>collaboration with artwork SIG to prepare some *.dev* variants of websites to have a “playground” to test Ansible role changes directly and then having corresponding PR for deployments in .stg. and then prod</li>
+<li>Business As Usual (BAU)<ul>
+<li> koji tags creation</li>
+<li> hardware issues to fix/follow</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h4>CentOS CI infrastructure</h4>
+
+
+
+<ul>
+<li>updated openshift to 4.8.x stable branch</li>
+<li>moved/onboarded new tenants on CI infra</li>
+<li>moved some workload in CI infra for better resiliency and backup plans</li>
+<li>expanded the existing cloud.cico (opennebula) infra with new hypervisors (x86_64)</li>
+<li>reorganized the slow nfs storage box (out of warranty) with raid10 layout to speed up/help with containers in openshift (for PersistentVolumes)</li>
+</ul>
+
+
+
+<h4>Fedora Release Engineering</h4>
+
+
+
+<p>While taking care of day to day business like nightly composes, package retirements and unretirements, new <a href="https://pagure.io/releng/fedora-scm-requests">scm requests</a> and occasional koji issues, we worked on new Fedora release.</p>
+
+
+
+<ul>
+<li>Mass rebuild of rpms and modules in Fedora Rawhide</li>
+<li>Branching of Fedora 35 from Rawhide</li>
+<li>Fedora Linux 35 Beta release</li>
+</ul>
+
+
+
+<h4>ARC</h4>
+
+
+
+<p>Investigated upgrading the Frontend Web UI for the CentOS mailing list. The investigation came to the conclusion that Mailman3, Postorius and Hyperkitty would need to be packaged for EPEL8. A new server would need to be deployed with the current CentOS mailing list migrated to it.</p>
+
+
+
+<h2>CentOS Stream/Emerging RHEL</h2>
+
+
+
+<h3>About</h3>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this new distribution a reality. The goal of this initiative is to prepare the ecosystem for the new CentOS Stream.</p>
+
+
+
+<p><strong>Issue trackers</strong></p>
+
+
+
+<ul><li><a href="https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;list_id=12143680&amp;product=Red%20Hat%20Enterprise%20Linux%209&amp;query_format=advanced&amp;version=CentOS%20Stream">Bugzilla tracker</a></li></ul>
+
+
+
+<p><strong>Documentation</strong></p>
+
+
+
+<ul><li><a href="https://docs.centos.org/en-US/docs/">CentOS documentation</a></li></ul>
+
+
+
+<h3>Members of sub-team for Q3 2021</h3>
+
+
+
+<ul>
+<li>Brian Stinson (Team Lead) (bstinson)</li>
+<li>Adam Samalik (Agile Practitioner) (asamalik)</li>
+<li>Aoife Moloney (Product Owner) (amoloney)</li>
+<li>Carl George</li>
+<li>James Antill</li>
+<li>Johnny Hughes</li>
+<li>Mohan Boddu (mboddu)</li>
+<li>Merlin Mathesius</li>
+<li>Stephen Gallagher (sgallagh)</li>
+<li>Troy Dawson (tdawson)</li>
+<li>Petr Bokoc (pbokoc)</li>
+</ul>
+
+
+
+<h3>What the sub-team did in Q3 2021</h3>
+
+
+
+<p>One thing we tackled was enabling side tag builds for Fedora ELN. Initially, we wanted to implement proper side tags for ELN, but we eventually settled for a simpler approach where we tag the Rawhide builds in, and then rebuild them in ELN. This ensures that we get all the packages built in ELN, with the Rawhide build as a backup should it fail in ELN. And we can even use this as a health metric for ELN — how many ELN packages are actually ELN builds.</p>
+
+
+
+<p>For CentOS Stream 9, we have cloud images in AWS available. You can get it by searching for “centos stream 9” in AWS, and to make sure you get the latest you can add this month (so “202110” for October 2021).</p>
+
+
+
+<p>Also, CentOS Stream 9 repositories are now available through mirrors using a meta link. Existing systems get this set up automatically with an update, as the centos-release package will include this metalink. This will take some load off the CentOS infra and potentially even make your updates faster.</p>
+
+
+
+<h2>Datanommer/Datagrepper</h2>
+
+
+
+<h3>About</h3>
+
+
+
+<p>Goal of this initiative is to update and enhance Datanommer and Datagrepper apps. Datanommer is the database that is used to store all of the fedora messages sent in the Fedora Infrastructure. Datagrepper is an API with web GUI that allows users to find messages stored in Datanommer database. Current solution is slow and the database data structure is not optimal for storing current amounts of data. And here is when this initiative comes into play.</p>
+
+
+
+<p><strong>Issue trackers</strong></p>
+
+
+
+<ul>
+<li><a href="https://github.com/fedora-infra/datanommer/issues">Datanommer tracker</a></li>
+<li><a href="https://github.com/fedora-infra/datagrepper">Datagrepper tracker</a></li>
+</ul>
+
+
+
+<p><strong>Application URLs</strong></p>
+
+
+
+<ul><li><a href="https://apps.fedoraproject.org/datagrepper/">Datagrepper</a></li></ul>
+
+
+
+<h3>Members of sub-team for Q3 2021</h3>
+
+
+
+<ul>
+<li>Aurelien Bompard (Team Lead) (abompard)</li>
+<li>Aoife Moloney (Product Owner) (amoloney)</li>
+<li>Ellen O’Carroll (Product Owner)</li>
+<li>Ryan Lerch (ryanlerch)</li>
+<li>Lenka Segura (lsegura)</li>
+<li>James Richardson (jrichardson)</li>
+<li>Stephen Coady (scoady)</li>
+</ul>
+
+
+
+<h3>What the sub-team did in Q3 2021</h3>
+
+
+
+<p>Datanommer and Datagrepper have been upgraded to use <a href="https://www.timescale.com/">TimescaleDB</a>, an open-source relational database for time-series data. TimescaleDB is a PostgreSQL extension that takes care of sharding the large amount of data that we have (and keep generating!), and maintains an SQL-compatible interface for applications.</p>
+
+
+
+<p>Datagrepper and the Datanommer consumer are now running in OpenShift instead of dedicated VMs.</p>
+
+
+
+<h2>DNF Counting</h2>
+
+
+
+<h3>About</h3>
+
+
+
+<p>DNF Counting is used to obtain data on how Fedora is consumed by users. The current implementation experiences timeouts and crashes when the data are obtained. This initiative is trying to make the retrieval of counting data more reliable and efficient.</p>
+
+
+
+<p><strong>Issue trackers</strong></p>
+
+
+
+<ul><li><a href="https://pagure.io/mirrors-countme/issues">Mirrors CountMe issue tracker</a></li></ul>
+
+
+
+<p><strong>Documentation</strong></p>
+
+
+
+<ul><li><a href="https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/dnf-counting/">DNF Counting Documentation</a></li></ul>
+
+
+
+<h3>Members of sub-team for Q3 2021</h3>
+
+
+
+<ul>
+<li>Nils Phillipsen (Team Lead) (nils)</li>
+<li>Aoife Moloney (Product Owner) (amoloney)</li>
+<li>Ellen O’Carroll (Product Owner)</li>
+<li>Adam Saleh (asaleh)</li>
+<li>Patrik Polakovic</li>
+<li>With special shout-out to Stephen Smoogen that provided vital fixes even though he wasn’t officially part of the initiative </li>
+</ul>
+
+
+
+<h3>What the sub-team did in Q3 2021</h3>
+
+
+
+<p>Scripts that create the statistics for <a href="https://data-analysis.fedoraproject.org/">https://data-analysis.fedoraproject.org/</a> were cleaned up and refactored, making them stable enough, so that they don’t require more manual intervention. </p>
+
+
+
+<p>The code on <a href="https://pagure.io/mirrors-countme/">https://pagure.io/mirrors-countme/</a> now has tests running in CI and is packaged as an rpm to avoid further mishaps in package installation. The deployment scripts were cleaned-up as well, alongside the actual deployment on log01 machine, with it’s hard-to-track manual interventions for last minute bug-fixes replaced by ansible-scripts.</p>
+
+
+
+<p>Cron-jobs that run the batch-jobs now only send notification emails on failures and to see the overall health of the batch-process you can see the simple dashboard on – <a href="https://monitor-dashboard-web-monitor-dashboard.app.os.fedoraproject.org/d/jzbVC2n7k/mirrors-countme-scripts">https://monitor-dashboard-web-monitor-dashboard.app.os.fedoraproject.org/</a></p>
+
+
+
+<h2>Metrics for Apps on OpenShift</h2>
+
+
+
+<h3>About</h3>
+
+
+
+<p>Goal of this initiative is to deploy OpenShift 4 in Fedora Infrastructure and start using Prometheus as a monitoring tool for apps deployed in OpenShift. This initiative should also define what metrics will be collected.</p>
+
+
+
+<p><strong>Issue trackers</strong></p>
+
+
+
+<ul><li><a href="https://pagure.io/fedora-infra/metrics-for-apps/boards/metrics-for-apps">Metrics for Apps Board</a></li></ul>
+
+
+
+<p><strong>Documentation</strong></p>
+
+
+
+<ul><li><a href="https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/">Sysadmin Guide</a></li></ul>
+
+
+
+<h3>Members of sub-team for Q3 2021</h3>
+
+
+
+<ul>
+<li>David Kirvan (Team Lead) (dkirwan)</li>
+<li>Aoife Moloney (Product Owner) (amoloney)</li>
+<li>Ellen O’Carroll (Product Owner)</li>
+<li>Vipul Siddharth (siddharthvipul1)</li>
+<li>Akashdeep Dhar (t0xic0der)</li>
+</ul>
+
+
+
+<h3>What the sub-team did in Q3 2021</h3>
+
+
+
+<ul>
+<li>Infrastructure prep work to install Red Hat CoreOS on nodes for OpenShift Container Platform (OCP)</li>
+<li>Deployed OCP4.8 in staging and production</li>
+<li>Configuring cluster with OAuth, OpenShift Container Storage (OCS) and other important needed operators/configs to support Fedora workloads</li>
+<li>Automate the process of OCP deployment with Ansible</li>
+<li>Deployed and configure the User Workload Monitoring stack</li>
+<li>Investigate app migration from older cluster to new</li>
+</ul>
+
+
+
+<h2>Epilogue</h2>
+
+
+
+<p>If you get here, thank you for reading this. If you want to contact us, feel free to do it in #redhat-cpe channel on <a href="https://libera.chat/">libera.chat</a>.</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-quarterly-update-q3-2021/">CPE Quarterly Update Q3 2021</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
