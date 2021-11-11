@@ -1,0 +1,177 @@
+---
+title:         "CPE Weekly Update &#8211; Week of November 08th &#8211; 12nd"
+date:          2021-11-11 10:38:12 UTC
+modified_date: 2021-11-11 10:38:16 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-08th-12nd/"
+---
+<p>This is a weekly report from the CPE (Community Platform Engineering) Team. If you have any questions or feedback, please respond to this report or contact us on #redhat-cpe channel on libera.chat (<a href="https://libera.chat/">https://libera.chat/</a>).</p>
+
+
+
+<span id="more-10429"></span>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Purpose of this team is to take care of day to day business regarding<br>CentOS and Fedora Infrastructure and Fedora release engineering work.<br>It’s responsible for services running in Fedora and CentOS<br>infrastructure and preparing things for the new Fedora release<br>(mirrors, mass branching, new namespaces etc.). The ARC (which is a<br>subset of the team) investigates possible initiatives that CPE might<br>take on.</p>
+
+
+
+<h2>Update</h2>
+
+
+
+<h3>Fedora Infra</h3>
+
+
+
+<ul>
+<li>Out of freeze, merged a bunch of post freeze work, more to come</li>
+<li>Dnssec records finally fully updated away from sha-1</li>
+<li>Ibiblio hosts ipv6 all moved off old net/block</li>
+<li>Attempted to move s390x builders to new mainframe, but hit issues, going to try again next week.</li>
+<li>Fedora koji upgraded to latest upstream</li>
+</ul>
+
+
+
+<h3>CentOS Infra including CentOS CI</h3>
+
+
+
+<ul><li>Business as usual</li></ul>
+
+
+
+<h3>Release Engineering</h3>
+
+
+
+<ul>
+<li>Epel 9 next is in bodhi</li>
+<li>New side tag for f35-kde</li>
+<li>Business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this<br>new distribution a reality. The goal of this initiative is to prepare<br>the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>We’ve updated RHEL 9 branching images in Dev Guide</li>
+<li>Working on documentation and tidying up docs locations on the compose reporting work showing the diffs between RHEL/c8s/c9s composes</li>
+<li>Package additions from RHEL appstream coming through to be added to CentOS Stream repos</li>
+<li>Content resolver logic has been reviewed and re-written to accommodate a new buildroot functionality and working through adding package placeholders</li>
+</ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Duffy is a system within CentOS CI Infra which allows tenants to provision and<br>access bare metal resources of multiple architectures for the purposes of<br>CI testing.<br>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have<br>OpenNebula hypervisor available, and have started developing playbooks which<br>can be used to create VMs using the OpenNebula API, but due to the current state<br>of how Duffy is deployed, we are blocked with new dev work to add the<br>VM checkout functionality.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Finished Work In Progress from last week</li>
+<li>Logging</li>
+<li>Database model</li>
+<li>Configuration Framework</li>
+<li>Tests started working successfully on Python 3.10, by magic! Test against Python 3.6 ~ 3.10 in CI.</li>
+<li>Work In Progress</li>
+<li>API endpoints for all the things</li>
+<li>Planning delegating to bare metal and OpenNebula (VMs)</li>
+</ul>
+
+
+
+<h2>FCOS OpenShift migration</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Move current Fedora CoreOS pipeline from the centos-ci OCP4 cluster to the newly<br>deployed fedora infra OCP4 cluster.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>New Openshift role sysadmin-openshift to handle installation/configuration of OCP 4 tasks</li>
+<li>Added oc client for ocp4 to the batcave01 PR</li>
+<li>Pushed changes to allow connections from batcave01 to the ocp4 cluster, follow on ticket opened with RH IT to open ports in firewall also.</li>
+</ul>
+
+
+
+<h2>EPEL</h2>
+
+
+
+<h2>Goal of this initiative</h2>
+
+
+
+<p>Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</p>
+
+
+
+<p>EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions. EPEL uses much of the same infrastructure as Fedora, including buildsystem, bugzilla instance, updates manager, mirror manager and more.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Fedora s390x builder migration was not successful, had to be rolled back and rescheduled, so epel9-next is still blocked</li>
+<li>Epel9-next has been added to bodhi, allowing us to test the push pipeline with noarch packages (epel-release and epel-rpm-macros)</li>
+<li>Additional ancillary work in mock-core-configs, bodhi, and fedpkg</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-08th-12nd/">CPE Weekly Update – Week of November 08th – 12nd</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
