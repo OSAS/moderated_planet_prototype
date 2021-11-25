@@ -1,0 +1,205 @@
+---
+title:         "CPE Weekly Update &#8211; Week of November 22nd &#8211; 26th"
+date:          2021-11-25 15:27:31 UTC
+modified_date: 2021-11-25 15:38:38 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-22nd-26th/"
+---
+<p>This is a weekly report from the CPE (Community Platform Engineering)<br>Team. If you have any questions or feedback, please respond to this<br>report or contact us on #redhat-cpe channel on libera.chat<br>(https://libera.chat/).</p>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Purpose of this team is to take care of day to day business regarding<br>CentOS and Fedora Infrastructure and Fedora release engineering work.<br>It’s responsible for services running in Fedora and CentOS<br>infrastructure and preparing things for the new Fedora release<br>(mirrors, mass branching, new namespaces etc.). The ARC (which is a<br>subset of the team) investigates possible initiatives that CPE might<br>take on.</p>
+
+
+
+<h2>Update</h2>
+
+
+
+<ul><li>Discourse2fedmsg mini initiative nearing completion</li></ul>
+
+
+
+<h3>Fedora Infra</h3>
+
+
+
+<ul>
+<li>Some issues post mainframe migration on s390x builders. Investigation ongoing</li>
+<li>Issues with some users password expiring, abompard fixed with a script</li>
+<li>Business as usual</li>
+</ul>
+
+
+
+<h3>CentOS Infra including CentOS CI</h3>
+
+
+
+<ul>
+<li>
+<a href="https://lists.centos.org/pipermail/ci-users/2021-November/002187.html">Announced</a> switch to 8-stream based container for cico-workspace (ci infra)</li>
+<li>Work <a href="https://pagure.io/centos-infra/issue/400">completed</a> to allow SIG to switch buildroot from centos 8 to RHEL8</li>
+<li>New SIGs tags:<ul>
+<li>Automotive experimental (Stream 9)</li>
+<li>Storage TDX-devel (Stream 8)</li>
+</ul>
+</li>
+<li>Fixed <a href="https://pagure.io/centos-infra/issue/532">issue with debuginfod pkgs filtered out</a> after process change for Stream 9/SIGs</li>
+<li>Tuned mirror.stream.centos.org pool due to <a href="https://pagure.io/centos-infra/issue/529">hard-disk space constraint</a> on sponsored/donated nodes</li>
+</ul>
+
+
+
+<h3>Release Engineering</h3>
+
+
+
+<ul>
+<li>F33 distgit branches had the wrong EOL set to 16-11-2021 but the real f33 EOL is 30-11-2021</li>
+<li>FCOS prunned OStree compose repo, saved about 2TB of disk space</li>
+<li>business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this<br>new distribution a reality. The goal of this initiative is to prepare<br>the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Investigating AWS cleanups</li>
+<li>Finishing Content Resolver buildroot changes</li>
+<li>Wrote ELN docs about <a href="https://docs.fedoraproject.org/en-US/eln/faq/">package differences (in FAQ)</a> and <a href="https://docs.fedoraproject.org/en-US/eln/extras/">adding packages to ELN Extras</a>
+</li>
+<li>Many PTOs this week</li>
+</ul>
+
+
+
+<h2>Datanommer/Datagrepper V.2</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>The datanommer and datagrepper stacks are currently relying on fedmsg which<br>we want to deprecate.<br>These two applications need to be ported off fedmsg to fedora-messaging.<br>As these applications are ‘old-timers’ in the fedora infrastructure, we would<br>also like to look at optimizing the database or potentially redesigning it to<br>better suit the current infrastructure needs.<br>For a phase two, we would like to focus on a DB overhaul.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul><li>The DB had been rebooted a few times and the script restarted. 40 days to go.</li></ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Duffy is a system within CentOS CI Infra which allows tenants to provision and<br>access bare metal resources of multiple architectures for the purposes of<br>CI testing.<br>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have<br>OpenNebula hypervisor available, and have started developing playbooks which<br>can be used to create VMs using the OpenNebula API, but due to the current state<br>of how Duffy is deployed, we are blocked with new dev work to add the<br>VM checkout functionality.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Duffy has sub-commands<ul>
+<li>Serving the web app</li>
+<li>Initial setup of DB schema</li>
+<li>Interactive shell for debugging and development</li>
+</ul>
+</li>
+<li>Initialize DB connection and related code when starting the app</li>
+<li>Ongoing: API endpoints</li>
+<li>Wednesday’s review + planning call: Conversation with Fedora QA about how Duffy can serve them</li>
+<li>CI: Let dependabot check for transient updates (and apply them)</li>
+</ul>
+
+
+
+<h2>FCOS OpenShift migration</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Move current Fedora CoreOS pipeline from the centos-ci OCP4 cluster to the newly<br>deployed fedora infra OCP4 cluster.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul><li>Work complete, handed over to the Fedora CoreOS team.</li></ul>
+
+
+
+<h2>EPEL</h2>
+
+
+
+<h2>Goal of this initiative</h2>
+
+
+
+<p>Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</p>
+
+
+
+<p>EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions. EPEL uses much of the same infrastructure as Fedora, including buildsystem, bugzilla instance, updates manager, mirror manager and more.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>EPEL 9 Next is ready, but not announced yet</li>
+<li>EPEL Steering Committee is evaluating some alternative plans that may let us launch EPEL 9 and EPEL 9 Next together</li>
+<li>Hoping to announce on the same day as the CentOS Stream 9 launch promotion (1-2 weeks)</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-22nd-26th/">CPE Weekly Update – Week of November 22nd – 26th</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
