@@ -1,0 +1,61 @@
+---
+title:         "EPEL 9 is now available"
+date:          2021-12-03 17:47:02 UTC
+modified_date: 2021-12-03 18:12:32 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/epel-9-is-now-available/"
+---
+<p>On behalf of the <a href="https://docs.fedoraproject.org/en-US/epel/">EPEL</a> Steering Committee, I’m pleased to announce the availability of EPEL 9. This is the culmination of five months of work between the EPEL Steering Committee, the Fedora Infrastructure and Release Engineering team, and other contributors. Package maintainers can now request <a href="https://src.fedoraproject.org/">dist-git</a> branches, trigger <a href="https://koji.fedoraproject.org">Koji</a> builds, and submit <a href="https://bodhi.fedoraproject.org/">Bodhi</a> updates for EPEL 9 packages.</p>
+
+
+
+<p>Instructions to enable the EPEL repository are available in <a href="https://docs.fedoraproject.org/en-US/epel/">our documentation</a>. If there is a Fedora package you would like to see added to EPEL 9, please let the relevant package maintainer know with a <a href="https://docs.fedoraproject.org/en-US/epel/epel-package-request/">package request</a>.</p>
+
+
+
+<span id="more-10509"></span>
+
+
+
+<h2>FAQ</h2>
+
+
+
+<h4>How can EPEL 9 launch before RHEL 9?</h4>
+
+
+
+<p>Thanks to <a href="https://blog.centos.org/2021/12/introducing-centos-stream-9/">CentOS Stream 9</a>, we have a close approximation of what RHEL 9 will look like when it is released. We have set up EPEL 9 to build against CentOS Stream 9. After the RHEL 9 release, we will switch it to build against RHEL 9 instead. We intend for this switch to be basically invisible to package maintainers and users.</p>
+
+
+
+<h4>What about <a href="https://docs.fedoraproject.org/en-US/epel/epel-about-next/">EPEL Next</a>?</h4>
+
+
+
+<p>EPEL 8 Next is still available for package maintainers when they need to build against CentOS Stream 8 instead of RHEL 8. EPEL 9 Next is also now available to complement EPEL 9,<br>but it won’t be necessary until after EPEL 9 switches to build against RHEL 9.</p>
+
+
+
+<h4>Why isn’t fedpkg available in EPEL 9 yet?</h4>
+
+
+
+<p>We believe that most package maintainers do their EPEL work from Fedora systems. Because of this we chose not to delay this announcement to wait for fedpkg (and all its dependencies) to be added to EPEL 9. fedpkg-1.41-2 (which adds support for requesting epel9 and epel9-next branches) is already available in the Fedora, EPEL8, and EPEL7 repositories. If you would like to see fedpkg in EPEL 9 as well, please submit a <a href="https://docs.fedoraproject.org/en-US/epel/epel-package-request/">package request</a>.</p>
+
+
+
+<h4>What happened to the mass rebuild plan?</h4>
+
+
+
+<p>We have <a href="https://lists.fedoraproject.org/archives/list/epel-devel@lists.fedoraproject.org/thread/UYRS43SV6ERPL2VIGR4XQACNHENFHH2N/">previously communicated</a> a plan to launch EPEL 9 Next first and then wait until the RHEL 9 release to launch EPEL 9. This would have included performing a mass branch and mass rebuild from EPEL 9 Next to EPEL 9. This plan made sense to us from the implementation perspective. However, we eventually realized that it would result in unnecessarily complicated instructions for package maintainers and users. It also had the drawback of not being ready on the RHEL 9 release day, even though it would follow soon afterwards.</p>
+
+
+
+<p>We revised our plan to simplify our messaging and to launch EPEL 9 before RHEL 9. This removes the need for a mass rebuild and gives package maintainers multiple months to build their packages for the RHEL 9 release.</p>
+
+
+
+<p></p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/epel-9-is-now-available/">EPEL 9 is now available</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
