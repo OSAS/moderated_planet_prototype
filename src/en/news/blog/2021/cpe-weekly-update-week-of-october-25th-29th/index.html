@@ -1,0 +1,150 @@
+---
+title:         "CPE Weekly Update – Week of October 25th – 29th"
+date:          2021-10-28 12:01:08 UTC
+modified_date: 2021-12-08 16:57:34 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-october-25th-29th/"
+---
+<p>This is a weekly report from the CPE (Community Platform Engineering) Team. If you have any questions or feedback, please respond to this report or contact us on the #redhat-cpe channel on libera.chat (<a href="https://libera.chat/">https://libera.chat/</a>).</p>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>The purpose of this team is to take care of day to day business regarding CentOS and Fedora Infrastructure and Fedora release engineering work. It’s responsible for services running in Fedora and CentOS infrastructure and preparing things for the new Fedora release (mirrors, mass branching, new namespaces etc.). The ARC (which is a subset of the team) investigates possible initiatives that CPE might take on.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<h4>Fedora Infra</h4>
+
+
+
+<ul>
+<li>Freeze breaks: added regions to aws fedimg uploads and fixed a cacching issue with upgrade json</li>
+<li>Rebooted: proxy34 and bvmhost-x86-07</li>
+<li>Tried to fix move of wiki talk pages, ended up creating PR to disable all talk pages.</li>
+<li>At 66 tickets, but many should be closable after freeze</li>
+</ul>
+
+
+
+<h4>CentOS Infra including CentOS CI</h4>
+
+
+
+<ul>
+<li>Kicked some migration for tenants on legacy cluster (nfs-ganesha)</li>
+<li>Rebased cico-workspace container to 8-stream (staging) (Ref <a href="https://quay.io/repository/centosci/cico-workspace/build/b197513b-0105-4774-a651-89cc4fe8e19d">https://quay.io/repository/centosci/cico-workspace/build/b197513b-0105-4774-a651-89cc4fe8e19d</a>)</li>
+<li>Pushed some new ciphers in prod through ansible role to get A+ cert on Qualys (Ref <a href="https://www.ssllabs.com/ssltest/analyze.html?d=git.centos.org&amp;hideResults=on">https://www.ssllabs.com/ssltest/analyze.html?d=git.centos.org&amp;hideResults=on</a>)</li>
+<li>Mirrormanager tuning with Adrian for 9-stream inside CI infra (Ref <a href="https://admin.fedoraproject.org/mirrormanager/host/2751">https://admin.fedoraproject.org/mirrormanager/host/2751</a>)</li>
+<li>Added/announced aarch64 as covered architecture for CI infra tenants</li>
+</ul>
+
+
+
+<h4>Release Engineering</h4>
+
+
+
+<ul>
+<li>F35 RC-1.2 is out and can be found at <a href="https://dl.fedoraproject.org/pub/alt/stage/35_RC-1.2/">https://dl.fedoraproject.org/pub/alt/stage/35_RC-1.2/</a>
+</li>
+<li>Business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>his initiative is working on CentOS Stream/Emerging RHEL to make this new distribution a reality. The goal of this initiative is to prepare the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Basic Stream/RHEL Buildroot reporting is in place, thanks James!</li>
+<li>Open discussion on pruning older packages from what we publish to the mirrors</li>
+<li>Open discussion on the impact of consolidating the Stream 8 and Stream 9 workflows for maintainers</li>
+<li>Business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Duffy is a system within CentOS CI Infra that allows tenants to provision and access bare metal resources of multiple architectures for the purposes of CI testing.</p>
+
+
+
+<p>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have OpenNebula hypervisor available and have started developing playbooks that can be used to create VMs using the OpenNebula API, but due to the current state of how Duffy is deployed, we are blocked with new dev work to add the VM checkout functionality.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Set up a boilerplate with a skeleton application</li>
+<li>Set up the CI in the repository with tests and coverage</li>
+<li>Created a CLI for configuring parameters</li>
+<li>Discussed workflows and methods for implementing models</li>
+</ul>
+
+
+
+<h2>FCOS OpenShift migration</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Move current Fedora CoreOS pipeline from the centos-ci OCP4 cluster to the newly deployed fedora infra OCP4 cluster.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Obtaining access on the cluster</li>
+<li>Creating playbook to create OpenShift resources</li>
+<li>Got the cluster updated and ready</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-october-25th-29th/">CPE Weekly Update – Week of October 25th – 29th</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
