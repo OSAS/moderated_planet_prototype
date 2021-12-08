@@ -1,0 +1,167 @@
+---
+title:         "CPE Weekly Update &#8211; Week of November 15th &#8211; 19th"
+date:          2021-11-20 14:39:57 UTC
+modified_date: 2021-12-08 16:56:46 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-15th-19th/"
+---
+<p>This is a weekly report from the CPE (Community Platform Engineering) Team. If you have any questions or feedback, please respond to this report or contact us on #redhat-cpe channel on libera.chat (<a href="https://libera.chat/">https://libera.chat/</a>).</p>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Purpose of this team is to take care of day to day business regarding<br>CentOS and Fedora Infrastructure and Fedora release engineering work.<br>It’s responsible for services running in Fedora and CentOS<br>infrastructure and preparing things for the new Fedora release<br>(mirrors, mass branching, new namespaces etc.). The ARC (which is a<br>subset of the team) investigates possible initiatives that CPE might<br>take on.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<h3>Fedora Infra</h3>
+
+
+
+<ul>
+<li>Mass updates &amp; reboots carried out</li>
+<li>Increased volumes on db01 and torrent02</li>
+<li>Moved s390x from z13 to z15 mainframe successfully</li>
+<li>F34 &amp; F35 maintainer test instances now available, F32 retired</li>
+</ul>
+
+
+
+<h3>CentOS Infra including CentOS CI</h3>
+
+
+
+<ul>
+<li>CentOS Linux 8.5.2111 released!</li>
+<li>Preparing to sunset its infra needs and switch SIG content for RHEL8 buildroot (opt-in)</li>
+<li>Handed over the dedicated Duffy Dev LAB infra for duffy initiative</li>
+</ul>
+
+
+
+<h3>Release Engineering</h3>
+
+
+
+<ul><li>Business as usual</li></ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this<br>new distribution a reality. The goal of this initiative is to prepare<br>the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Thanks to a contribution from the folks in the Automotive SIG we are now publishing Vagrant boxes for CentOS Stream 9 to <a href="https://cloud.centos.org/centos/9-stream/x86_64/images/" target="_blank" rel="noreferrer noopener">https://cloud.centos.org/centos/9-stream/x86_64/images/</a>
+</li>
+<li>Business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Duffy is a system within CentOS CI Infra which allows tenants to provision and<br>access bare metal resources of multiple architectures for the purposes of<br>CI testing.<br>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have<br>OpenNebula hypervisor available, and have started developing playbooks which<br>can be used to create VMs using the OpenNebula API, but due to the current state<br>of how Duffy is deployed, we are blocked with new dev work to add the<br>VM checkout functionality.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>All things database because it practically blocked everything (ongoing)<ul><li>Enable having various sub-commands in the first place to be able to do other things than just run the app</li></ul>
+<ul>
+<li>Add one that sets up an empty database with tables from the model</li>
+<li>Prepare database schema migrations</li>
+<li>Test synchronous and asynchronous DB operations</li>
+</ul>
+</li>
+<li>Implement not-yet-functional (see above) API endpoints for users, physical nodes and virtual nodes (ongoing)</li>
+<li>Write an Ansible role to deploy Duffy, set up database and fetch playbooks from their repos (ongoing)</li>
+</ul>
+
+
+
+<h2>FCOS OpenShift migration</h2>
+
+
+
+<h2>Goal of this Initiative</h2>
+
+
+
+<p>Move current Fedora CoreOS pipeline from the centos-ci OCP4 cluster to the newly<br>deployed fedora infra OCP4 cluster.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul><li>Work complete, handed over to the FCOS team</li></ul>
+
+
+
+<h2>EPEL</h2>
+
+
+
+<h2>Goal of this initiative</h2>
+
+
+
+<p>Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</p>
+
+
+
+<p>EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions. EPEL uses much of the same infrastructure as Fedora, including buildsystem, bugzilla instance, updates manager, mirror manager and more.</p>
+
+
+
+<h2>Updates</h2>
+
+
+
+<ul>
+<li>Fedora s390x builder migration was successful, unblocking epel9</li>
+<li>Productive meetings with Terry Bowling and Eric Hendricks refining the EPEL “feature” and planning future collaboration</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-november-15th-19th/">CPE Weekly Update – Week of November 15th – 19th</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
