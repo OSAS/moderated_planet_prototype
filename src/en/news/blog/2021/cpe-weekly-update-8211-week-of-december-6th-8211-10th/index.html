@@ -1,0 +1,181 @@
+---
+title:         "CPE Weekly Update &#8211; Week of December 6th &#8211; 10th"
+date:          2021-12-09 10:48:16 UTC
+modified_date: 2021-12-09 10:48:20 UTC
+author:        "Fedora Infra"
+url:           "https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-december-6th-10th/"
+---
+<img width="150" height="150" src="//communityblog.fedoraproject.org/wp-content/uploads/2021/12/cpe_weekly-150x150.png" class="webfeedsFeaturedVisual wp-post-image" alt="" loading="lazy" style="display: block; margin-bottom: 5px; clear:both;max-width: 100%;" link_thumbnail="">
+<p>This is a weekly report from the CPE (Community Platform Engineering) Team. If you have any questions or feedback, please respond to this report or contact us on #redhat-cpe channel on libera.chat (<a href="https://libera.chat/">https://libera.chat/</a>).</p>
+
+
+
+<span id="more-10538"></span>
+
+
+
+<h1>Highlights of the week</h1>
+
+
+
+<h2>Infrastructure &amp; Release Engineering</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Purpose of this team is to take care of day to day business regarding CentOS and Fedora Infrastructure and Fedora release engineering work. It’s responsible for services running in Fedora and CentOS infrastructure and preparing things for the new Fedora release (mirrors, mass branching, new namespaces etc.). The ARC (which is a subset of the team) investigates possible initiatives that CPE might take on.</p>
+
+
+
+<h3>Update</h3>
+
+
+
+<h4>Fedora Infra</h4>
+
+
+
+<ul>
+<li>Discourse2fedmsg completed and deployed in prod</li>
+<li>groups support for oauth2 for discourse put on hold due to a potential upstream solution</li>
+<li>Switched to qemu/libvirt from the “Advanced Virt” stack</li>
+<li>All staging builders moved to f35, but our fedora messaging plugin is broken in f35 hub.</li>
+<li>New bodhi deployment this week</li>
+</ul>
+
+
+
+<h4>CentOS Infra including CentOS CI</h4>
+
+
+
+<ul>
+<li>CentOS Stream 9 <a href="https://pagure.io/centos-infra/issue/477">artwork deployed</a> (Kudos to Artwork SIG !) :</li>
+<li>https://www.centos.org</li>
+<li>https://blog.centos.org</li>
+<li>https://lists.centos.org</li>
+<li>Meeting[s] to prepare the Community Cage DC move</li>
+<li>Identified (and <a href="https://pagure.io/centos-infra/issue/551">fixed</a>) small issue for PowerDNS geoip setup for 9-stream</li>
+<li>Bussiness as Usual (koji/cbs tags, new mirrors for 7 / 8-stream and 9-stream)</li>
+</ul>
+
+
+
+<h4>Release Engineering</h4>
+
+
+
+<ul>
+<li>epel9 branches are popping up ~520 in the last week</li>
+<li>F36 change request reviews are landing in releng tracker</li>
+<li>business as usual</li>
+</ul>
+
+
+
+<h2>CentOS Stream</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>This initiative is working on CentOS Stream/Emerging RHEL to make this new distribution a reality. The goal of this initiative is to prepare the ecosystem for the new CentOS Stream.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>Stream 9 composes were broken over the weekend, the backlog is now clear and a compose was pushed yesterday</li>
+<li>Gitlab authentication suffered some effects of the auth.redhat.com migration, we expect this is now resolved</li>
+<li>Implementing Content Resolver performance optimisations</li>
+</ul>
+
+
+
+<h2>CentOS Duffy CI</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>Duffy is a system within CentOS CI Infra which allows tenants to provision and access bare metal resources of multiple architectures for the purposes of CI testing.<br>We need to add the ability to checkout VMs in CentOS CI in Duffy. We have OpenNebula hypervisor available, and have started developing playbooks which can be used to create VMs using the OpenNebula API, but due to the current state of how Duffy is deployed, we are blocked with new dev work to add the VM checkout functionality.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li>API endpoints with database connection (finally)</li>
+<li>Extended documentation for API endpoints (in progress)</li>
+<li>Command-line option to avoid overriding existing database when performing migration</li>
+<li>Backend work (started): Background tasks like provisioning nodes, clean up</li>
+<li>Endpoint authentication with API key / token pertaining to a certain project / tenant (in progress)</li>
+</ul>
+
+
+
+<h2>OSCI – Distrobaker monitoring</h2>
+
+
+
+<h3>Goal of this Initiative</h3>
+
+
+
+<p>This initiative is to improve the Distrobaker monitoring to monitor side-tags and module builds. Distrobaker is a service which rebuilds the CentOS 9 Stream Koji builds for RHEL 9 in Brew.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul><li>Currently working on adding metrics for the sidetag comparison code.</li></ul>
+
+
+
+<h2>EPEL</h2>
+
+
+
+<h3>Goal of this initiative</h3>
+
+
+
+<p>Extra Packages for Enterprise Linux (or EPEL) is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux, including, but not limited to, Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux (SL), Oracle Linux (OL).</p>
+
+
+
+<p>EPEL packages are usually based on their Fedora counterparts and will never conflict with or replace packages in the base Enterprise Linux distributions. EPEL uses much of the same infrastructure as Fedora, including buildsystem, bugzilla instance, updates manager, mirror manager and more.</p>
+
+
+
+<h3>Updates</h3>
+
+
+
+<ul>
+<li><a href="https://communityblog.fedoraproject.org/epel-9-is-now-available/">EPEL9 (and EPEL9 Next) launched!</a></li>
+<li>Already have 501 packages in testing (255 builds, 158 bodhi updates)</li>
+<li>
+<a href="https://docs.fedoraproject.org/en-US/epel/#_quickstart">Quickstart documentation</a> updated</li>
+<li>EPEL Steering Committee <a href="https://pagure.io/epel/issue/133">decided to standardize</a> on &#123;distro}+epel-&#123;version} pattern for mock configs rather than a generic epel-&#123;version} config</li>
+<li>centos-stream+epel-9 configs added to mock-core-configs</li>
+</ul>
+
+
+
+<p>Kindest regards,<br>CPE Team</p>
+<p>The post <a rel="nofollow" href="https://communityblog.fedoraproject.org/cpe-weekly-update-week-of-december-6th-10th/">CPE Weekly Update – Week of December 6th – 10th</a> appeared first on <a rel="nofollow" href="https://communityblog.fedoraproject.org">Fedora Community Blog</a>.</p>
